@@ -4,13 +4,18 @@ import 'login.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
+  if(Firebase.apps.isEmpty)
+  {
+    await Firebase.initializeApp(
       options: const FirebaseOptions(
         apiKey: "AIzaSyCxaEsBsR_Bpz7eaz8gTEvXGDlnb5TarsA",
         appId: "1:129379087274:web:ca325d010372dc53fcb1d3",
         messagingSenderId: "129379087274",
         projectId: "chat-6680c",
-  ));
+      )
+    );
+  }
+  
   runApp(MyApp());
 }
 
