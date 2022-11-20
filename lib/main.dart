@@ -7,6 +7,7 @@ Future<void> main() async {
   if(Firebase.apps.isEmpty)
   {
     await Firebase.initializeApp(
+      name: '<Chatt>',
       options: const FirebaseOptions(
         apiKey: "AIzaSyCxaEsBsR_Bpz7eaz8gTEvXGDlnb5TarsA",
         appId: "1:129379087274:web:ca325d010372dc53fcb1d3",
